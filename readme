@@ -1,0 +1,36 @@
+This repository contains the source code and configuration files for the Smart Electrical System, which integrates with Blynk IoT for remote monitoring and control. The system includes sensors for detecting gas, water, fire, and electrical parameters using the PZEM sensor. It also incorporates an automation TDR (Time Delay Relay) to automate responses based on sensor data. The aim of this project is to enhance safety, efficiency, and control in managing electrical systems by providing real-time monitoring and automated responses to potential hazards.
+
+Key Features:
+
+Real-time Monitoring: Allows users to monitor various environmental and electrical parameters in real time via the Blynk app.
+Gas Sensor: Detects the presence of harmful gases and alerts the user if the levels exceed a safe threshold.
+Water Sensor: Identifies water leakage or flooding, providing early warnings to prevent damage.
+Fire Sensor: Detects the presence of fire or excessive heat, triggering alarms and notifications to ensure safety.
+PZEM Sensor: Monitors electrical parameters such as voltage, current, power, and energy consumption, providing valuable insights into electrical usage.
+Automation TDR: Automatically controls electrical appliances or safety systems based on the data received from sensors, introducing a delay when necessary to manage startup sequences or prevent false alarms.
+Blynk IoT Integration: Provides a user-friendly interface through the Blynk app, allowing remote control and monitoring of the entire system. Users can receive alerts, view sensor data, and control devices from their smartphones.
+Data Logging: Logs sensor data over time for analysis, which can be used to optimize energy consumption and improve safety protocols.
+Technology Stack:
+
+Hardware:
+
+Microcontroller (e.g., NodeMCU or ESP8266): Serves as the central unit to gather data from sensors and communicate with the Blynk cloud.
+Gas Sensor (MQ series): To detect and measure the concentration of gas in the air.
+Water Sensor: To detect the presence of water, indicating leakage or flooding.
+Fire Sensor (e.g., Flame sensor): To detect the presence of fire or high temperatures.
+PZEM-004T Sensor: To monitor electrical parameters such as voltage, current, power, and energy.
+Time Delay Relay (TDR): To introduce time delays in the operation of connected devices based on predefined conditions.
+Software:
+
+Arduino IDE: Used for programming the microcontroller.
+Blynk Library: To facilitate communication between the microcontroller and the Blynk app for IoT functionalities.
+C/C++: Programming language used for writing the firmware for the microcontroller.
+How it Works:
+
+Setup and Configuration: The microcontroller is connected to various sensors and the TDR. It is programmed using the Arduino IDE to collect data from sensors and communicate with the Blynk app.
+
+Sensor Data Collection: The gas, water, fire, and PZEM sensors continuously monitor their respective parameters. The microcontroller reads the data and processes it.
+
+Real-time Monitoring and Alerts: Sensor data is sent to the Blynk app in real time. If any parameter exceeds a safe threshold (e.g., gas concentration, water presence, fire detection), the system triggers an alert through the app, notifying the user.
+
+Automated Response: Based on sensor data, the TDR can automatically activate or deactivate electrical appliances, alarms, or other safety mechanisms. For example, if a gas leak is detected, the system can cut off power to certain areas and send a notification to the user.
